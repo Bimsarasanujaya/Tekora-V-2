@@ -24,4 +24,4 @@ jobs:
 
       - name: Run Tekora Scanner
         run: |
-          python app.py
+         python scanner.py
