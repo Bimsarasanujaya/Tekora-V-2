@@ -1,0 +1,53 @@
+{% extends 'base.html' %}{% block content %}
+<section class="plansHero reveal">
+  <div class="plansPill">👑 Tekora Trading Plans ✨</div>
+  <h1>Starter & Premium Plans</h1>
+  <p>Choose your Tekora access plan. Click once and the secure PayPal checkout opens instantly.</p>
+  <div class="accessMini {{'ok' if access.status=='ACTIVE' else 'locked'}}"><b>{{access.status}}</b> {{access.plan}} • {{access.active_until_date}}</div>
+</section>
+
+<section class="pricingSaaS paypalPricing reveal delay1">
+  <article class="planCard paypalPlan directCheckoutPlan">
+    <h2>Starter</h2><p>Core Tekora access for serious early traders</p>
+    <strong class="price">$49.99</strong><em>/access payment</em>
+    <ul><li>✓ Tekora signal engine access</li><li>✓ Live trade tracking</li><li>✓ Trade journal access</li><li>✓ Premium dashboard</li><li>✓ Email/password account</li></ul>
+    <button class="glowCheckoutBtn starterGlow directPayBtn" data-paypal="https://www.paypal.com/ncp/payment/R7CV6U7JEGSD8">⚡ Get Starter</button>
+    <small class="checkoutHint">Opens secure PayPal checkout instantly.</small>
+  </article>
+
+  <article class="planCard popularPlan paypalPlan directCheckoutPlan">
+    <div class="popularBadge">⭐ PREMIUM</div>
+    <h2>Premium</h2><p>Full Tekora experience and advanced access</p>
+    <strong class="price">$150</strong><em>/access payment</em>
+    <ul><li>✓ Everything in Starter</li><li>✓ Advanced signal scoring</li><li>✓ Live signal evolution</li><li>✓ Advanced journal analytics</li><li>✓ Priority engine updates</li></ul>
+    <button class="glowCheckoutBtn premiumGlow directPayBtn" data-paypal="https://www.paypal.com/ncp/payment/UR26CGPU9NTKY">👑 Get Premium</button>
+    <small class="checkoutHint">Opens secure PayPal checkout instantly.</small>
+  </article>
+</section>
+
+<section class="paymentPanel paymentNotice reveal delay2">
+  <div>
+    <h2>Secure PayPal Checkout</h2>
+    <p>Your logged-in Tekora email is <b>{{user}}</b>. After PayPal payment, the next upgrade is webhook verification so Tekora unlocks the subscription automatically.</p>
+  </div>
+  <div class="checkoutBox"><b>Direct Checkout</b><span>One click → secure PayPal checkout</span><small>Clean plan-to-payment flow for Tekora users.</small></div>
+</section>
+
+<script>
+(function(){
+  function openCheckout(btn){
+    const url = btn.getAttribute('data-paypal');
+    btn.classList.add('payOpening');
+    btn.innerHTML = 'Opening PayPal Checkout...';
+    setTimeout(function(){
+      window.location.href = url;
+    }, 220);
+  }
+  window.addEventListener('load', function(){
+    document.querySelectorAll('.directPayBtn').forEach(function(btn){
+      btn.addEventListener('click', function(){ openCheckout(btn); });
+    });
+  });
+})();
+</script>
+{% endblock %}

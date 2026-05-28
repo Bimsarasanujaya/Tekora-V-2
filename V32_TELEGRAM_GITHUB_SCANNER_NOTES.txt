@@ -1,0 +1,21 @@
+TEKORA V32 — TELEGRAM VIP AUTO SIGNAL ENGINE
+
+Added:
+- telegram_bot/github_scanner.py
+- telegram_bot/telegram_sender.py
+- config/telegram_config.json
+- state/telegram_state.json
+- .github/workflows/tekora-telegram-scanner.yml
+
+How it works:
+1. GitHub Actions runs every 5 minutes.
+2. If there is no active trade, Tekora scans 5m/15m scalp/aggressive setups.
+3. If a setup score is 80+ and not HIGH RISK, it sends the VIP signal to Telegram.
+4. It stores that setup in state/telegram_state.json.
+5. On later cycles, it monitors entry/TP/SL using live MEXC candles.
+6. It sends Telegram updates when status changes.
+7. After TP3, SL, or expiry, it clears active_trade and scans again.
+
+Security note:
+The token is currently inside config/telegram_config.json because you asked for a ready ZIP.
+Before public launch, regenerate the token in BotFather and use GitHub Secrets.

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}{% block content %}
+<section class="dashWelcome godHero forexHero reveal">
+  <div>
+    <span class="eyebrow">Forex Screenshot Engine</span>
+    <h1>ICT • SMC • MSNR Chart Analysis</h1>
+    <p>Upload a TradingView screenshot, choose style/session/concepts/RR, and Tekora returns the best available setup with honest risk labeling. No paid forex API key needed.</p>
+  </div>
+  <div class="heroActionsApp"><button class="primary mega pulseBtn" onclick="document.getElementById('chartUpload').click()">Upload Chart →</button></div>
+</section>
+
+<section class="forexLab reveal delay1">
+  <article class="uploadPanel glass fadeCard">
+    <input id="chartUpload" type="file" accept="image/png,image/jpeg,image/webp" hidden onchange="previewForexImage(event)">
+    <div id="dropZone" class="dropZone" onclick="document.getElementById('chartUpload').click()">
+      <div class="uploadIcon">⇧</div>
+      <h2>Upload Chart Image</h2>
+      <p>Best: ticker visible, timeframe visible, price axis visible, full candles, no popups.</p>
+      <button class="primary">Select Image</button>
+      <small>PNG • JPG • WEBP</small>
+    </div>
+    <img id="chartPreview" class="chartPreview" alt="chart preview">
+    <div id="forexResult" class="forexResult emptyState"><h2>Ready for screenshot analysis</h2><p>Tekora will always return a plan, but weak conditions are marked HIGH RISK honestly.</p></div>
+  </article>
+
+  <aside class="profilePanel glass fadeCard delay2">
+    <div class="commandTitle small"><div><span class="eyebrow">Analysis Controls</span><h2>Trade Profile</h2></div></div>
+    <div class="formGrid">
+      <label>Pair / Symbol<input id="fxSymbol" value="EURUSD" placeholder="EURUSD / GBPJPY / XAUUSD"></label>
+      <label>Current visible price<input id="fxPrice" placeholder="Optional but improves SL/TP"></label>
+      <label>Timeframe<select id="fxTf"><option>1m</option><option>5m</option><option selected>15m</option><option>30m</option><option>1h</option><option>4h</option></select></label>
+      <label>Session<select id="fxSession"><option>Asia</option><option selected>London</option><option>London Killzone</option><option>New York</option><option>NY Killzone</option><option>Silver Bullet</option></select></label>
+      <label>Style<select id="fxStyle"><option>conservative</option><option selected>balanced</option><option>aggressive</option></select></label>
+      <label>Minimum RR<select id="fxRR"><option value="1.5">1:1.5</option><option value="2" selected>1:2</option><option value="3">1:3</option><option value="4">1:4</option></select></label>
+    </div>
+    <h3 class="miniTitle">Concepts</h3>
+    <div class="checkGrid">
+      <label><input type="checkbox" name="fxConcept" value="ICT" checked> ICT</label><label><input type="checkbox" name="fxConcept" value="SMC" checked> SMC</label><label><input type="checkbox" name="fxConcept" value="MSNR" checked> MSNR</label><label><input type="checkbox" name="fxConcept" value="Liquidity" checked> Liquidity</label><label><input type="checkbox" name="fxConcept" value="FVG" checked> FVG</label><label><input type="checkbox" name="fxConcept" value="Order Block" checked> Order Block</label><label><input type="checkbox" name="fxConcept" value="MSS/BOS" checked> MSS/BOS</label><label><input type="checkbox" name="fxConcept" value="Premium/Discount" checked> Premium/Discount</label>
+    </div>
+    <h3 class="miniTitle">Indicators</h3>
+    <div class="checkGrid slim"><label><input type="checkbox" name="fxInd" value="EMA" checked> EMA</label><label><input type="checkbox" name="fxInd" value="RSI" checked> RSI</label><label><input type="checkbox" name="fxInd" value="MACD" checked> MACD</label><label><input type="checkbox" name="fxInd" value="VWAP" checked> VWAP</label></div>
+    <button class="primary full analyzeBtn" onclick="runForexAnalysis()">Analyze Chart</button>
+    <p class="truthNote">Educational analysis only. Tekora does not guarantee 80%+ accuracy; it scores confluence and labels risk.</p>
+  </aside>
+</section>
+{% endblock %}

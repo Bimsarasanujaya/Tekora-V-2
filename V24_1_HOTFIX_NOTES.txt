@@ -1,0 +1,14 @@
+TEKORA V24.1 HOTFIX
+
+Fixed:
+- /api/scan 500 error caused by Candle object vs dict mismatch.
+- V23 snapshot now reads candles safely using _v22_val().
+- V24 context now supports both Candle objects and dict candles.
+- Scan Best Setup keeps returning best available setup.
+
+Added:
+- Premium analysing popup window when Scan Best Setup / Generate Signal is clicked.
+- Animated live phase text: MEXC feed, liquidity, fakeout, regime, continuation, template building.
+- Copy Full Signal template retained and working with clipboard fallback.
+
+TP cards remain removed. Engine-first build.

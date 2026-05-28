@@ -1,0 +1,16 @@
+TEKORA V24 REAL LIVE SMART EXECUTION FINAL
+
+Added:
+- Real live trade status patch: TP1/TP2/TP3/SL detection from /api/trades polling.
+- Auto BE move rule after TP1: stop loss is moved to entry in the tracked trade object.
+- Lifecycle labels: ENTRY TRIGGERED, TP1 HIT - SL MOVED TO BE, TP2 HIT - TRAILING, CLOSED.
+- Smart Execution AI: fake breakout rejection, liquidity sweep logic, session volatility filter, market regime detection, trend continuation confidence.
+- Always Best Available setup policy: Scan Best Setup returns the top ranked setup instead of “No clean setup”.
+- Copy Full Signal button fixed with insecure-localhost fallback and full VIP-style text template.
+- Journal analytics already exposed: winrate, RR stats, streak, best pair, best timeframe, recent trades.
+
+Removed/kept removed:
+- TP card/export/share system is intentionally not included. Engine first.
+
+Important:
+Tekora V24 is a rule-based analysis and tracking app. It does not guarantee profit and does not place orders automatically.

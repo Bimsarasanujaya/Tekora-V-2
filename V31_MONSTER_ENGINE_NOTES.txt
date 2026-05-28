@@ -1,0 +1,18 @@
+TEKORA V31 MONSTER ENGINE
+
+Added:
+- ICT core: MSS, CISD, FVG ranking, order block quality, liquidity sweep validation, premium/discount arrays, PO3 model, Judas swing detector, OTE retracement, killzone logic, draw-on-liquidity engine.
+- Advanced orderflow layer: bid/ask imbalance, aggressive delta, absorption detection, exhaustion candles, stacked imbalances, liquidity wall stacking/pulling, delta divergence, iceberg probability logic.
+- CVD engine: cumulative volume delta proxy, session delta, divergence detector, buyer/seller aggression, delta trend memory.
+- Footprint engine: delta buckets, imbalance clusters, trapped-trader zones, absorption footprint notes, unfinished auction detection.
+- Live AI thinking animation: liquidity scan, orderflow check, CVD pressure, displacement/CISD, sniper ranking, final grade.
+- Sniper Entry AI: LTF MSS, displacement, imbalance, delta alignment, session timing, market condition checklist.
+- Whale activity detector: volume surge, spoofing watch, aggressive flow, liquidity vacuum detection.
+- HTF bias engine: 4H / 1H / 15m / 5m alignment, continuation probability, reversal probability, trend exhaustion.
+- Replay memory learning: setup fingerprints stored and reused for adaptive confidence.
+- Smart confidence engine: weighted score and S+ / A+ / A / B / AVOID grade.
+- Market condition radar: trend, chop, expansion, accumulation, manipulation, low liquidity, news-volatility watch.
+- V31 UI polish: colors match dark/light Tekora theme better, animated AI thinking rail, radar strip, footprint panel.
+
+Truth note:
+All orderflow/CVD/footprint/institutional analytics use public exchange candles/depth as proxies until paid institutional feeds are connected. This is an advanced decision-support engine, not guaranteed profit or automatic financial advice.

@@ -1,0 +1,5 @@
+{
+  "bot_token": "8997780270:AAFUp7yEKqvoPwl49frVIsGr39LMq_Qgjo0",
+  "chat_id": "-1003763868558",
+  "note": "For public launch, rotate this token and use GitHub Secrets instead of storing it in a file."
+}

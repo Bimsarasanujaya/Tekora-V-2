@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Tekora</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"><script src="https://www.paypal.com/sdk/js?client-id=BAAgkrt2Mu9YQxonK9oPPocxW43ghMVdnF3YIwRBRZsrfbR_TSm0qMf3ZFH8uwfe-_cXJg6Orp15js_M7M&components=hosted-buttons&disable-funding=venmo&currency=USD"></script></head><body class="appbody">
+<div class="orb orb1"></div><div class="orb orb2"></div><div class="gridbg"></div>
+<div class="mobileTop"><div class="brand mini"><div class="logo">T</div><div><b>Tekora</b><span>AI Trading Signals</span></div></div><button id="menuBtn" class="iconBtn">☰</button></div>
+<div id="mobileOverlay" class="mobileOverlay"></div>
+<div class="shell tradingShell">
+  <aside id="sidebar" class="sidebar slide-in">
+    <div class="brand sideBrand"><div class="logo">T</div><div><b>Tekora</b><span>AI Trading Signals</span></div></div>
+    <div class="navGroup"><p>Trading Tools</p><nav><a class="{{'active' if active=='dashboard'}}" href="{{url_for('dashboard')}}">⌘ <span>Dashboard</span></a><a class="{{'active' if active=='live'}}" href="{{url_for('live_trades')}}">↯ <span>Live Trades</span></a><a class="{{'active' if active=='ai'}}" href="{{url_for('ai_engine')}}">✦ <span>Crypto AI</span></a><a class="{{'active' if active=='forex'}}" href="{{url_for('forex_ai')}}">▣ <span>Forex AI</span></a><a class="{{'active' if active=='info'}}" href="{{url_for('info')}}">ⓘ <span>Info</span></a><a class="{{'active' if active=='billing'}}" href="{{url_for('billing')}}">◆ <span>Plans</span></a></nav></div>
+    <div class="navGroup"><p>Performance</p><nav><a class="{{'active' if active=='journal'}}" href="{{url_for('journal')}}">◷ <span>Journal</span></a><a href="/api/journal.csv">⇩ <span>Export CSV</span></a></nav></div>
+    <div class="navGroup"><p>Account</p><nav><a class="{{'active' if active=='account'}}" href="{{url_for('account')}}">◉ <span>My Account</span></a><a href="{{url_for('home')}}">⌂ <span>Homepage</span></a><a href="{{url_for('logout')}}">⏻ <span>Logout</span></a></nav></div>
+    <div class="status"><i></i><div><b>Engine online</b><span>Tekora core active</span></div></div>
+  </aside>
+  <main class="main traderMain">
+    <header class="topbar"><button class="iconBtn desktopMenu" onclick="document.getElementById('sidebar').classList.toggle('collapsed')">☰</button><div id="ticker" class="ticker"><span>Loading market pulse...</span></div><button id="themeToggle" class="themeDock" aria-label="toggle theme"><span>🌙</span></button></header>
+    {% block content %}{% endblock %}
+  </main>
+</div>
+<div id="scanOverlay" class="scanOverlay"><div class="scanBox"><div class="scanOrb"></div><h2>Tekora analysis running</h2><p id="scanPhase">Preparing live smart execution scan...</p><div class="scanSteps"><span></span><span></span><span></span><span></span></div></div></div><div id="toast"></div><script src="{{ url_for('static', filename='app.js') }}"></script></body></html>

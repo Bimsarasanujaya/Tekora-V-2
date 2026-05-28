@@ -1,0 +1,12 @@
+TEKORA V27.2 DIRECT PAYPAL CHECKOUT
+
+What changed:
+- Removed the extra embedded checkout panel flow.
+- Added clean glowing Get Starter and Get Premium buttons.
+- Clicking Get Starter redirects directly to PayPal checkout for Hosted Button R7CV6U7JEGSD8.
+- Clicking Get Premium redirects directly to PayPal checkout for Hosted Button UR26CGPU9NTKY.
+- Keeps Phase 1 focus: engine + UI + login + payment foundation, no EXE transformation.
+
+Important:
+- Direct checkout uses PayPal hosted payment links.
+- Automatic subscription unlock still needs PayPal webhook/verification in the next build.

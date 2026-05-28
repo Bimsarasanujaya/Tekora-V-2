@@ -1,0 +1,12 @@
+TEKORA V27 PAYPAL HOSTED BUTTONS UPDATE
+
+Added real PayPal hosted buttons to the Billing/Plans page:
+- Starter Plan: $49.99 USD, hosted button ID R7CV6U7JEGSD8
+- Premium Plan: $150.00 USD, hosted button ID UR26CGPU9NTKY
+
+The PayPal SDK is loaded once in templates/base.html.
+The buttons render inside templates/billing.html.
+
+Important:
+These are PayPal hosted one-time payment buttons. They can collect payment now.
+For fully automatic instant account unlock, connect PayPal webhook verification / auto-return with order verification next. Until then, verify payments manually in PayPal and use /api/admin/activate for safe activation.

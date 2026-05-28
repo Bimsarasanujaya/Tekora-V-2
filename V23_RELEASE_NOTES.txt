@@ -1,0 +1,25 @@
+TEKORA V23 CORE ENGINE 100% - ENGINE FIRST RELEASE
+
+Added:
+- V23 signal wrapper over the real V22/V21 MEXC engine.
+- Anti-chop filter.
+- Fakeout/sweep guard.
+- Volatility extension guard.
+- Trend-strength and displacement scoring.
+- Cleaner execution labels by action:
+  EXECUTE NOW = Market Entry
+  LIMIT ENTRY = Limit Entry
+  WAIT FOR RETEST = Retest Zone
+  HIGH RISK = Signal Only Zone
+- Engine-first UI cards.
+- Live trade lifecycle metadata and live RR.
+- Journal stats UI: active, win rate, avg RR, streak, best pair.
+
+Removed / intentionally not added:
+- TP-card generator.
+- Export/share fancy signal-card system.
+
+Important:
+- Tekora V23 does not place exchange orders automatically.
+- It uses live MEXC public market data where available.
+- It is a rule-based signal/tracking assistant, not guaranteed profit.

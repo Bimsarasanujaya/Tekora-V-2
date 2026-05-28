@@ -1,0 +1,22 @@
+TEKORA V21 ORDERFLOW MEMORY CHALLENGE READY
+
+Added:
+- Expanded crypto universe: built-in 120+ USDT markets plus dynamic MEXC top-volume scan fallback.
+- V21 scan uses top150 request and scans practical top 80 per click for PC speed.
+- Websocket orderbook attempt for MEXC spot depth with REST depth fallback.
+- Live DOM pressure fields: imbalance, spread, nearest wall, wall strength, trap risk.
+- Market regime detection: trending, ranging, compression, expansion, dead market.
+- Real displacement engine: ATR %, body/ATR displacement, slope and compression checks.
+- Session intelligence: Asia, London, NY overlap, NY, low-liquidity windows.
+- Advanced structure layer: BOS, MSS, CHOCH, EQH/EQL, sweep context.
+- Signal memory scaffold: tracks adaptive memory report and is ready for journal outcome learning.
+- Lightweight backtest snapshot: historical momentum fitness estimate per symbol/timeframe.
+- Info page: account balance, max SL loss per trade, TP reference, monthly target, signature.
+- Progress tracker: simulated balance, target %, wins/losses, completion message.
+- Mobile UI polish and animated scan/signal reveal.
+
+Important truth:
+- Tekora always returns the best available setup from the scan.
+- It will label trade_permission honestly as READY, WAIT, HIGH RISK, or DEFENSIVE.
+- It does not guarantee profit and does not auto-place trades.
+- VPS/24-7 deployment and certificate generator are not included in this version.

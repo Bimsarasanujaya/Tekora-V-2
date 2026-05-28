@@ -1,0 +1,12 @@
+Tekora V22 FAST FIXED READY
+
+Fixes:
+- Fixed /api/signal 500 crash caused by Candle object vs dict access.
+- Added universal candle reader helper for dict/Candle compatibility.
+- Patched regime, ATR, structure and backtest snapshot layers.
+- Added JSON error responses for signal/scan endpoints.
+- Restored and upgraded analysis overlay animation.
+- Reduced depth timeout and top scan pass for faster signal generation on normal PCs.
+
+Note:
+This bot gives probability-based educational trade ideas only. It does not guarantee profit or auto-place trades.

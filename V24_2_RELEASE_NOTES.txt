@@ -1,0 +1,17 @@
+TEKORA V24.2 — DYNAMIC RR + MARKET PREFILTER
+
+Core changes:
+- Added dynamic RR requirements:
+  Scalp: minimum 1:2
+  Swing: minimum 1:3
+  Aggressive: minimum 1:1.5
+  Sniper: minimum 1:5
+- Tekora still ALWAYS returns the best available setup when Scan Best Setup is clicked.
+- Added fast market-condition prefilter before deep analysis:
+  ATR activity, displacement, trend strength, volume push, compression/chop warning.
+- Deep analysis now focuses on the strongest prefiltered symbols to reduce waiting time.
+- If conditions are choppy, Tekora labels the setup as WAIT/defensive instead of pretending it is perfect.
+- TP cards remain removed. Engine-first build only.
+
+Important:
+Tekora does not place real orders. Educational/rule-based analysis only. Use manual risk control.

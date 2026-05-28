@@ -1,0 +1,19 @@
+TEKORA V26 SAAS AUTH + PAYMENT FOUNDATION
+
+Phase 1 focus only: engine + UI + login/signup + payment access foundation.
+EXE/installer/license-key system is intentionally NOT included yet.
+
+Added:
+- Professional email/password signup and login.
+- Account page that connects access to the user's email.
+- Premium SaaS plans page inspired by the provided Tradvio screenshot.
+- Starter and Pro plan cards with monthly/annual toggle.
+- PayPal-ready checkout endpoints.
+- Dev test payment completion flow that instantly activates subscription for the logged-in email.
+- PayPal webhook receiver placeholder for next upgrade.
+- Google login button prepared, but not faked. Needs real Google OAuth credentials before launch.
+
+Important honesty:
+- Real Google login requires Google Cloud OAuth Client ID/Secret and callback wiring.
+- Real PayPal instant activation requires PayPal buttons + webhook signature verification.
+- This build prepares the structure and UI, and includes a dev activation flow for testing subscription UX.

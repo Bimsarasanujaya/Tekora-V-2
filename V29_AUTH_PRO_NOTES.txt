@@ -1,0 +1,26 @@
+Tekora Auth Pro Upgrade
+
+Added:
+- Real Google OAuth route wiring using GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET.
+- Google callback: /auth/google/callback
+- Email verification links on signup.
+- Resend verification endpoint.
+- Gmail SMTP helper for verification + password reset links.
+- Email outbox fallback when SMTP is not configured.
+- Cleaner billing text without visible version labels.
+
+Required for Gmail sending:
+TEKORA_SMTP_HOST=smtp.gmail.com
+TEKORA_SMTP_PORT=587
+TEKORA_SMTP_USERNAME=yourgmail@gmail.com
+TEKORA_SMTP_PASSWORD=your_16_digit_google_app_password
+TEKORA_SMTP_FROM=Tekora <yourgmail@gmail.com>
+TEKORA_BASE_URL=https://bimsaragannile.pythonanywhere.com
+
+Required for Google login:
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+Authorized redirect URI in Google Cloud Console:
+https://bimsaragannile.pythonanywhere.com/auth/google/callback
+
+If SMTP is not configured, check data/email_outbox.json for generated links during testing.

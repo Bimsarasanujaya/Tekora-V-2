@@ -1,0 +1,17 @@
+TEKORA V30 MONSTER AI LAYERS
+
+Added:
+- AI learning memory file: data/tekora_ai_memory.json
+- Lightweight adaptive ML/neural scoring layer
+- Live MEXC depth/orderbook pressure layer
+- Real CVD proxy from signed candle volume
+- Footprint-style price/volume/delta profile
+- Market memory fingerprints per symbol/timeframe/action/direction
+- Adaptive neural weighting feature map
+- BTC/ETH correlation engine
+- Market sentiment AI from major crypto movement
+- /api/ai-lab endpoint for diagnostics
+- Monster Intelligence Layer UI panel inside every signal card
+
+Honest limitation:
+Institutional orderflow, CVD, and footprint are exchange-data proxy analytics using public candles/depth. True institutional feeds require paid exchange/orderflow data later.

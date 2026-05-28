@@ -1,0 +1,10 @@
+{% extends 'base.html' %}{% block content %}
+<section class="dashWelcome godHero reveal">
+  <div><span class="eyebrow">Professional Account</span><h1>My Account</h1><p>Your Tekora access is connected to your email account.</p></div>
+  <div class="accessBadge {{'ok' if access.status=='ACTIVE' else 'locked'}}"><b>{{access.status}}</b><span>{{access.plan}} • until {{access.active_until_date}}</span></div>
+</section>
+<section class="accountGrid reveal delay1">
+  <article class="glass billingCard"><span class="eyebrow">Email</span><h2>{{user}}</h2><p class="truthNote">All future payments/subscriptions are matched to this email.</p><div class="fieldGrid compact"><div class="field"><span>Email status</span><b>{{'Verified' if profile.email_verified else 'Not verified'}}</b></div><div class="field"><span>Login provider</span><b>{{profile.provider or 'email'}}</b></div></div>{% if not profile.email_verified %}<button class="smallBtn" onclick="resendVerification()">Resend verification email</button>{% endif %}</article>
+  <article class="glass billingCard"><span class="eyebrow">Subscription</span><h2>{{access.plan}}</h2><div class="fieldGrid compact"><div class="field"><span>Status</span><b>{{access.status}}</b></div><div class="field"><span>Active until</span><b>{{access.active_until_date}}</b></div></div><a class="primary" href="{{url_for('billing')}}">Manage Plan</a></article>
+</section>
+{% endblock %}

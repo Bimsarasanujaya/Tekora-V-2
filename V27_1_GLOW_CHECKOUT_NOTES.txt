@@ -1,0 +1,12 @@
+TEKORA V27.1 - GLOW CHECKOUT BUTTONS
+
+Added:
+- Get Starter glowing button
+- Get Premium glowing button
+- Clean checkout section below pricing cards
+- Clicking plan button automatically selects correct PayPal checkout panel and scrolls user to checkout
+- Starter PayPal Hosted Button ID: R7CV6U7JEGSD8
+- Premium PayPal Hosted Button ID: UR26CGPU9NTKY
+
+Note:
+PayPal Hosted Buttons cannot be secretly clicked by custom code for security reasons. This build uses the correct safe UX: custom Tekora glowing buttons take the user directly to the matching PayPal checkout section, where they complete checkout through the official PayPal button.

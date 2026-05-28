@@ -1,0 +1,26 @@
+{% extends 'base.html' %}{% block content %}
+<section class="dashWelcome godHero reveal">
+  <div><span class="eyebrow">Challenge Control</span><h1>Info + Growth Target</h1><p>Set your account balance, max SL loss per trade, TP target, and end-of-month goal. Tekora stores it and uses it as a risk reference.</p></div>
+  <div class="heroActionsApp"><button class="primary mega pulseBtn" onclick="saveProfile()">Save Profile →</button></div>
+</section>
+<section class="dashboardSplit reveal delay1">
+  <article class="pulsePanel glass profilePanel">
+    <div class="commandTitle small"><div><span class="eyebrow">$5 challenge planner</span><h2>Risk Management</h2></div></div>
+    <div class="control tradingControl cleanControl infoControl">
+      <div><label>Account Balance ($)</label><input id="accountBalance" type="number" step="0.01" placeholder="5.00"></div>
+      <div><label>Max SL Loss Per Trade ($)</label><input id="riskPerTrade" type="number" step="0.01" placeholder="0.30"></div>
+      <div><label>Target TP Profit Reference ($)</label><input id="targetProfit" type="number" step="0.01" placeholder="1.00"></div>
+      <div><label>End of Month Target Balance ($)</label><input id="targetBalance" type="number" step="0.01" placeholder="10.00"></div>
+      <div><label>Certificate Signature</label><input id="ownerSignature" type="text" placeholder="Your name / Tekora"></div>
+      <div><label>Target Note</label><input id="monthNote" type="text" placeholder="Grow safely. Survival first."></div>
+    </div>
+    <div class="btnRow"><button class="primary" onclick="saveProfile()">Save Info</button><button class="smallBtn" onclick="loadProfile()">Refresh</button></div>
+  </article>
+  <aside class="liveMini glass profileProgress">
+    <div class="commandTitle small"><div><span class="eyebrow">Monthly Target</span><h2>Progress</h2></div></div>
+    <div id="profileProgress" class="emptyMini">Loading progress...</div>
+  </aside>
+</section>
+<section class="pulsePanel glass reveal delay2"><div class="commandTitle small"><div><span class="eyebrow">Engine Memory</span><h2>Adaptive Signal Notes</h2></div></div><div id="memoryReport" class="explainPanel open"><p>Loading memory...</p></div></section>
+<section class="pulsePanel glass reveal delay2"><div class="commandTitle small"><div><span class="eyebrow">Safety</span><h2>How Tekora uses your info</h2></div></div><div class="explainPanel open"><div class="explainLine"><i></i><span>Signal cards show risk reference and RR context, but Tekora does not auto-place trades.</span></div><div class="explainLine"><i></i><span>Journal outcomes simulate progress toward your monthly target.</span></div><div class="explainLine"><i></i><span>Certificate generator can be added next after the target completion system is stable.</span></div><p class="truthNote">Educational tool. No guaranteed accuracy, no guaranteed profits.</p></div></section>
+{% endblock %}
